@@ -1,0 +1,21 @@
+﻿<Application x:Class="LostFocus.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LostFocus"
+             xmlns:vm="clr-namespace:LostFocus.ViewModels"
+             xmlns:uc="clr-namespace:LostFocus.UserControls"
+             Startup="OnStartup">
+    <Application.Resources>
+
+        <DataTemplate DataType="{x:Type vm:FirstChildViewModel}">
+            <uc:FirstChildUserControl/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:SecondChildViewModel}">
+            <uc:SecondChildUserControl/>
+        </DataTemplate>
+        
+        
+        
+    </Application.Resources>
+</Application>
