@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,7 @@ namespace LostFocus
 
         private void ccc(object sender, KeyboardFocusChangedEventArgs e)
         {
+            Debug.WriteLine("lost focus...");
             
         }
 

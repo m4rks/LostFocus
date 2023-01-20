@@ -18,6 +18,9 @@
     </i:Interaction.Triggers>
 
     <Grid>
-        <ContentControl Content="{Binding CurrentView}" LostFocus="aaa"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label FontSize="20" Content="Main window" />
+            <ContentControl Content="{Binding CurrentViewModel}" LostFocus="aaa"/>
+        </StackPanel>
     </Grid>
 </Window>

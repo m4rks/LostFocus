@@ -31,6 +31,8 @@ namespace LostFocus
 
             services.AddScoped<MainViewModel>();
 
+            services.AddSingleton<NavigationStore>();
+
             //add additional services here:
 
             services.AddSingleton<IFirstChildViewModel, FirstChildViewModel>();
@@ -41,6 +43,9 @@ namespace LostFocus
 
         private void OnStartup(object sender, StartupEventArgs e)
         {
+            NavigationStore navigationStore = new NavigationStore();
+            
+
             var mainWindow = _serviceProvider.GetService<MainWindow>();
 
             mainWindow.DataContext = _serviceProvider.GetService<MainViewModel>();

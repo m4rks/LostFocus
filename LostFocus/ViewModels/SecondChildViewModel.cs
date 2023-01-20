@@ -8,8 +8,10 @@ namespace LostFocus.ViewModels
 {
     public class SecondChildViewModel : ViewModelBase, ISecondChildViewModel
     {
-        public SecondChildViewModel()
+        private readonly NavigationStore _navigationStore;
+        public SecondChildViewModel(NavigationStore navigationStore)
         {
+            this._navigationStore = navigationStore;
             //Parameterless Constructor.
         }
     }
