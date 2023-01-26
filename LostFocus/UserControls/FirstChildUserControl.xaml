@@ -15,7 +15,7 @@
             <Button Width="200" Command="{Binding PumpControlCommand}" Background="ForestGreen" FontSize="20" >Show task for pump</Button>
             <Button Width="200" Command="{Binding StartAnimatedGifCommand}" Background="ForestGreen" FontSize="20" >StartAnimatedGifCommand</Button>
             <Image gif:ImageBehavior.RepeatBehavior="1x"
-                   gif:ImageBehavior.AnimationDuration="1"
+                   gif:ImageBehavior.AnimationDuration="00:00:01"
                    gif:ImageBehavior.AnimatedSource="{Binding SelectedImage}"
                    Stretch="None"
                    Width="350"
