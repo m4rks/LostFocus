@@ -7,7 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Content="Second Child View Model" HorizontalAlignment="Center" Height="34" VerticalAlignment="Center" Width="156"/>
-
+        <StackPanel Orientation="Vertical">
+            <Label Content="Second Child View Model" HorizontalAlignment="Center" Height="34" VerticalAlignment="Center" Width="156"/>
+            <Button Width="200" Command="{Binding First_ControlCommand}" Background="IndianRed" FontSize="20" >Show task for pump</Button>
+        </StackPanel>
     </Grid>
 </UserControl>

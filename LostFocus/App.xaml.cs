@@ -15,9 +15,11 @@ namespace LostFocus
     {
 
         private readonly IServiceProvider _serviceProvider;
+        private readonly NavigationStore _navigationStore;
 
         public App()
         {
+            _navigationStore = new NavigationStore();
             var serviceCollection = new ServiceCollection();
 
             ConfigureServices(serviceCollection);
@@ -43,9 +45,6 @@ namespace LostFocus
 
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            NavigationStore navigationStore = new NavigationStore();
-            
-
             var mainWindow = _serviceProvider.GetService<MainWindow>();
 
             mainWindow.DataContext = _serviceProvider.GetService<MainViewModel>();
