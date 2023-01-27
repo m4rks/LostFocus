@@ -1,4 +1,6 @@
-﻿using LostFocus.ViewModels;
+﻿using LostFocus.Infrastructures;
+using LostFocus.Interfaces;
+using LostFocus.ViewModels;
 using LostFocus.ViewModels.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -40,6 +42,8 @@ namespace LostFocus
             services.AddSingleton<IFirstChildViewModel, FirstChildViewModel>();
 
             services.AddSingleton<ISecondChildViewModel, SecondChildViewModel>();
+
+            services.AddSingleton<IProductRepository, FakeProductRepository>();
 
         }
 
